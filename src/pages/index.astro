@@ -1,25 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from "../components/card"
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/card";
 ---
 
 <Layout title="henri">
 	<main>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-10 gap-5">
 			<Card client:load className="aspect-[2] sm:col-span-2  ">
-				<h2 class="text-4xl ">henri</h2>
-				<p>a german webdev, working both in front- and backend.</p>
+				<h2 class="text-4xl">henri,</h2>
+				<p class="md:w-[70%] lg:w-[60%]">
+					I'm a german webdev, working both in front- and backend. I
+					code for 3 years with javascript, typescript, python and
+					dart.
+				</p>
+				<div class="flex">
+					<a href="github.com/i-am-henri"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width={1.5}
+							stroke="currentColor"
+							class="w-6 h-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+							></path>
+						</svg></a
+					>
+				</div>
 			</Card>
 			<Card client:load className="aspect-square">project 1</Card>
 			<Card client:load className="aspect-square">project 2</Card>
-			<Card client:load className="aspect-[2] sm:col-span-2">featured blogpost</Card>
+			<Card client:load className="aspect-[2] sm:col-span-2">
+				featured blogpost
+			</Card>
 			<Card client:load className="aspect-square">blogpost 2</Card>
 			<Card client:load className="aspect-square">my tools</Card>
 			<div class="flex flex-col justify-center items-center">
-				<p>made by <a href="https://github.com/i-am-henri">henri</a>.</p>
-				<p>inspired by <a href="https://chester.how">chester</a>.</p>
+				<p>
+					made by <a
+						href="https://github.com/i-am-henri"
+						target="_blank">henri</a
+					>.
+				</p>
+				<p>
+					inspired by <a href="https://chester.how" target="_blank"
+						>chester</a
+					>.
+				</p>
 			</div>
 		</div>
 	</main>
 </Layout>
-
