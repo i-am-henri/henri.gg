@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/card";
 import WorkspacePicture from "../../public/cover.png"
+const studentPost = 
 ---
 
 <Layout title="henri">
@@ -107,9 +108,11 @@ import WorkspacePicture from "../../public/cover.png"
 				</Card></a
 			>
 			<Card client:load className="aspect-square">a second project</Card>
-			<Card client:load className="aspect-[2] sm:col-span-2">
-				featured blogpost
-			</Card>
+			<a href="/blog/dev-as-student.mdx" class="no-underline  aspect-[2] sm:col-span-2">
+				<Card client:load className="">
+					<h2 class="text-3xl">my life as a student and webdev.</h2>
+				</Card>
+			</a>
 			<Card client:load className="aspect-square">blogpost 2</Card>
 			<Card client:load className="aspect-square">my tools</Card>
 			<div class="flex flex-col justify-center items-center">
