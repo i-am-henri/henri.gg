@@ -10,11 +10,15 @@ import Card from "../components/card"
 				<h2 class="text-4xl ">henri</h2>
 				<p>a german webdev, working both in front- and backend.</p>
 			</Card>
-			<div class="aspect-square">hey</div>
-			<div class="aspect-square">hey</div>
-			<div class="aspect-square">hey</div>
-			<div class="aspect-square">hey</div>
-			<div class="aspect-square">hey</div>
+			<Card client:load className="aspect-square">project 1</Card>
+			<Card client:load className="aspect-square">project 2</Card>
+			<Card client:load className="aspect-[2] sm:col-span-2">featured blogpost</Card>
+			<Card client:load className="aspect-square">blogpost 2</Card>
+			<Card client:load className="aspect-square">my tools</Card>
+			<div class="flex flex-col justify-center items-center">
+				<p>made by <a href="https://github.com/i-am-henri">henri</a>.</p>
+				<p>inspired by <a href="https://chester.how">chester</a>.</p>
+			</div>
 		</div>
 	</main>
 </Layout>

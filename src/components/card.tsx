@@ -2,7 +2,7 @@
 import { useRef, useState, type ReactNode } from "react";
 interface Props {
     className?: string,
-    children: ReactNode
+    children: ReactNode,
 }
 export default function Card(props: Props){
     const divRef = useRef<HTMLDivElement>(null);
