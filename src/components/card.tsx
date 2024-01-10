@@ -1,13 +1,10 @@
 
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 interface Props {
-    className?: string
+    className?: string,
+    children: ReactNode
 }
-export default function Card(props: Props, {
-    children,
-  }: {
-    children: React.ReactNode
-  }){
+export default function Card(props: Props){
     const divRef = useRef<HTMLDivElement>(null);
     const [isFocused, setIsFocused] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -48,7 +45,7 @@ export default function Card(props: Props, {
             onBlur={handleBlur}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={"relative max-w-xs rounded-3xl border border-neutral-800 bg-neutral-950 p-8 " + props.className}
+            className={"relative w-full h-full rounded-3xl border border-neutral-800 bg-neutral-950 p-8 " + props.className}
         >
             <div
                 className="pointer-events-none absolute -inset-px opacity-0 transition duration-500"
@@ -57,7 +54,7 @@ export default function Card(props: Props, {
                     background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,255,255,.25), transparent 40%)`,
                 }}
             />
-            {children}
+            {props.children}
         </div>
     );
 };
